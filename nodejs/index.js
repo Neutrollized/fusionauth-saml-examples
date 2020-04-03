@@ -120,7 +120,6 @@ app.post('/login/callback',
 );
 
 // logout hander
-// TODO: clears the connect.sid cookie, but doesn't really log out...
 app.get('/logout',
   function (req, res) {
     console.log('-----------------------------');
