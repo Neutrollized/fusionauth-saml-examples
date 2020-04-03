@@ -6,3 +6,7 @@ I run all my code/examples on a VM in the cloud as I needed something with a pub
 You can follow [this guide](https://fusionauth.io/docs/v1/tech/samlv2/) from FusionAuth to set up your SAML Identity Provider (IdP).  Most of the stuff is straight forward, but you will need some stuff from your Service Provider (SP) and vice versa.  You what you put as **Issuer** in your IdP also needs to match what you put in your SP.  Depending on the code library that you use, sometimes the nameing of the various URLs aren't and exact match.  (i.e. Passport.js calls the **Login URL**, `entryPoint`) 
 
 You will also have to create some users and register it with your application.  Assuming you're going to be creating fictitious users with bogus e-mails, be sure to untoggle the *Send email to setup password** to open up the menu for you to set their password at creation time.
+
+## TODO
+- Python SAML SP
+- Ruby SAML SP perhaps?
