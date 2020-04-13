@@ -25,5 +25,5 @@ There's no **issuer** field in the SAML2 options, so instead what you have to do
 Go to: **http://[NODE PUBLIC IP]:9000**
 
 ## Known issues 
-- the logut URL/SLS doesn't seem to working here
+- the logut button works and does log you out, but doesn't redirect you back to the login page
 - when given the prompt, to login from the FusionAuth IdP, even if you login with a user that's not registered with this particular application, you'll still get directed to the callback URL.  I assume this to be a limitation to the simplicity of this Node SAML SP tester.  However, if you look in your FusionAuth's Dashboard under **Recent Logins**, only registered users for the appropriate applications will show up there, so I can only trust that it means users that aren't registered with the application don't actually get logged in
