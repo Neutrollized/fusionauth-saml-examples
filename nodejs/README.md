@@ -11,7 +11,7 @@ You can install all the pre-reqs defined in [package.json](./package.json) with 
 ### Create certs
 You'll need 3 certs/keys:
 - public and private key for our app/SP.  You can generate this with `openssl req -x509 -newkey rsa:4096 -keyout certs/key.pem -out certs/cert.pem -nodes -days 900` -- it doesn't matter what you fill in really, just put something in.  Our SAML request will be encrypted with our private key and we'll have to provide our public key to the IdP so they can decrypt said request
-- public key of the IdP.  The IdP will encrypt their response with their private key, which is why we'll need their public key to decrypt it 
+- public key/cert of the IdP.  The IdP will encrypt their response with their private key, which is why we'll need their public key to decrypt it 
 
 ### Populate [index.js](./index.js)
 - replace `[NODE PUBLIC IP]` with the public IP of your server
@@ -20,6 +20,8 @@ You'll need 3 certs/keys:
 
 ### Run it!
 `node index` or if you want it running in the background: `nohup node index &`
+
+Go to: **http://[NODE PUBLIC IP]:4300/login**
 
 ## Known issues 
 - the `/logout` route in this Node SP doesn't seem to be working as intended even though it does clear the `connect.sid` cookie

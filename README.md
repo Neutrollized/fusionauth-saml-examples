@@ -8,5 +8,5 @@ You can follow [this guide](https://fusionauth.io/docs/v1/tech/samlv2/) from Fus
 You will also have to create some users and register it with your application.  Assuming you're going to be creating fictitious users with bogus e-mails, be sure to untoggle the *Send email to setup password** to open up the menu for you to set their password at creation time.
 
 ## TODO
-- Python SAML SP
 - Ruby SAML SP perhaps?
+- Java SAML SP ?
